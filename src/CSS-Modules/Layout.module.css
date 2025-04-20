@@ -1,0 +1,134 @@
+html, body{
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.ContainerGeneral{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color05);
+    position: relative;
+}
+
+.SvgOne{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.Container_Redirect{
+    background-color: transparent;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    z-index: 1;
+
+    & .Logo_Tipo{
+        display: block;
+        padding: 20px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    & p{
+        max-width: 100%;
+        text-indent: 1em;
+        color: var(--color02);
+        margin-top: 20px;
+        margin-bottom: 50px;
+        font-family: "Roboto", serif;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 2em;
+    }
+
+    & h1{
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        font-size: 2em;
+        margin: 0;
+        padding: 0;
+        line-height: 40px;
+        color: var(--color03);
+    }
+
+    & span{
+        margin-bottom: 10px;
+        padding: 0;
+        color: var(--color04);
+    }
+
+    & button{
+        text-transform: uppercase;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        border: solid 3px var(--color01);
+        background-image: linear-gradient(to left, var(--color04), var(--color03));
+        color: var(--color01);
+        font-weight: bolder;
+        font-size: 1.0rem;
+    }
+
+    & button:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.8s;
+    }
+}
+
+footer{
+    width: 100%;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    bottom: -5px;
+    left: 0;
+}
+
+@media screen and (max-width: 999px){
+    .Container_Redirect{
+        max-width: 90%;
+
+        & p{
+            font-size: 15px;
+            text-align: center;
+        }
+
+        & .Logo_Tipo{
+            width: 130px;
+            height: 120px;
+        }
+
+        & h1{
+            font-size: 50px;
+        }
+
+        
+        & span{
+            font-size: 15px;
+        }
+
+        & button{
+            cursor: pointer;
+            transition: 0.8s;
+            padding: 15px;
+            font-size: 13px;
+        }
+    }
+}
