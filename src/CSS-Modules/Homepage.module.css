@@ -9,7 +9,7 @@ html, body, ul, li, a{
     flex-direction: column;
     align-content: center;
     align-items: center;
-    background-color: #e0deda;
+    background-color: var(--color01);
 }
 
 .NavBar{
@@ -182,10 +182,18 @@ html, body, ul, li, a{
     align-items: center;
     align-content: center;
     width: 100%;
-    height: 500px;
+    height: 400px;
     padding: 20px;
-    background-color: #ece5df;
+    background-color: var(--color01);
+    z-index: 1;
 
+    & h3{
+        display: block;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 100px;
+    }
 
     & div{
         display: flex;
@@ -219,6 +227,56 @@ html, body, ul, li, a{
     & div:hover{
         cursor: pointer;
     }
+}
+
+.Space{
+    width: 100%;
+    height: 50px;
+    background-color: var(--color01);
+}
+
+
+.SactionTree{
+    width: 95%;
+    height: 80vh;
+    background-image: url("https://polosaomateus.com.br/wp-content/uploads/2020/04/nutricao-clinica.png");
+    background-repeat: no-repeat;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+        & div:nth-child(1){
+            width: 40%;
+           
+
+            & h1{
+                text-transform: uppercase;
+                color: var(--color03);
+            }
+
+            & span{
+                color: var(--color03);
+                font-size: 18px;
+                
+            }
+        }
+
+
+        & div:nth-child(2){
+            width: 40%;
+
+            & button{
+                text-transform: uppercase;
+                padding: 20px;
+                border-radius: 10px;
+                font-weight: bolder;
+            }
+        }
 }
 
 
@@ -287,14 +345,13 @@ html, body, ul, li, a{
         z-index: 0;
 
         & img{
-            height: 230px;
+            height: 200px;
         }
     }
 
     .SactionOne{
-
         height: 800px;
-
+        
         & img{
             height: 400px;
             width: 90%;
@@ -320,21 +377,64 @@ html, body, ul, li, a{
     }
 
     .SectionTwo{
-        height: 900px;
+        height: 1200px;
 
-        & div > img{
+        & h3{
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+        & div{
+           width: 90%;
+        }
+
+        & img{
             width: 80px;
             margin-bottom: 10px;
         }
 
         
-        & div > h4{
+        & h4{
             font-size: 20px;
         }
 
-        & div > p{
+        & p{
             font-size: 15px;
             text-align: justify;
+        }
+    }
+
+    .Modal{
+
+        & div{
+            width: 90%;
+            margin-bottom: 80px;
+            border-radius: 10px;
+
+            & i{
+                top: 0%;
+                left: 85%;
+            }
+        
+        }
+    }
+
+    .SactionTree{
+
+        & div:nth-child(1){
+            width: 90%;
+
+            & h1{
+                font-size: 25px;
+            }
+
+            & span{
+                font-size: 15px;
+
+            }
+        }
+
+        & div:nth-child(2){
+            width: 100%;
         }
     }
 }
