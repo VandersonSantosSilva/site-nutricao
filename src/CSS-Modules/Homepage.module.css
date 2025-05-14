@@ -9,7 +9,7 @@ html, body, ul, li, a{
     flex-direction: column;
     align-content: center;
     align-items: center;
-    background-color: var(--color01);
+    background-color: var(--color06);
 }
 
 .NavBar{
@@ -36,7 +36,7 @@ html, body, ul, li, a{
         padding: 10px;
         font-size: 15px;
         text-transform: uppercase;
-        color: var(--color01);
+        color: var(--color06);
         font-weight: bolder;
     }
 
@@ -69,64 +69,39 @@ html, body, ul, li, a{
     margin: 0;
     padding: 0;
     z-index: 0;
-
+    
     & img{
         height: 600px;
     }
 }
 
-.SactionOne{
-    margin-top: 50px;
-    margin-bottom: -350px;
-    width: 100%;
-    height: 700px;
-    position: relative;
-    background-image: url("../Assets//BackgroundAbaut.png");
-    filter: brightness(0.6);
-    background-repeat: no-repeat!important;
-    background-size: cover;
-    overflow: hidden;
-    z-index: 0;
-
+.SectionOne{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
     & img{
-        position: absolute;
-        top: -70px;
-        height: 800px;
+        max-width: 300px;
+        transform: scaleX(-1);
     }
-    
-    & .ContainerAbaut{
-        max-width: 50%;
-        margin-left: auto;
-        margin-right: 30px;
-        margin-top: 100px;
-        padding: 30px;
 
-        & h1{
-            color: var(--color01);
-            font-weight: bold;
-            font-family: "Open Sans", sans-serif;
-        }
+    & div{
+        margin-top: 50px;
+        width: 60%;
+        text-align: justify;
 
-        & span{
-            color: var(--color01);
+        & div:nth-child(1){
+            line-height: 30px;
+            color: var(--color03);
         }
 
         & p{
-            color: var(--color01);
-            font-family: "Open Sans", sans-serif;
-            text-align: justify;
-            font-weight: 400;
-            margin-top: 15px;
-            text-indent: 1em;
+            margin-top: 20px;
         }
     }
-
-}
-
-.SvgWave{
-    z-index: 1;
-    margin-top: 70px;
 }
 
 .ModalOff{
@@ -174,27 +149,25 @@ html, body, ul, li, a{
     }
 }
 
+h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .SectionTwo {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    column-gap: 20px;
+    justify-content: center;
+    place-items: center;
     width: 100%;
-    height: 400px;
     padding: 20px;
-    background-color: var(--color01);
-    z-index: 1;
+    margin-top: 50px;
+    margin-bottom: 100px;
 
-    & h3{
-        display: block;
-        width: 100%;
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 100px;
-    }
-
+    
+   
     & div{
         display: flex;
         flex-direction: column;
@@ -229,55 +202,61 @@ html, body, ul, li, a{
     }
 }
 
-.Space{
-    width: 100%;
-    height: 50px;
-    background-color: var(--color01);
-}
+.SactionTree {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 
 
-.SactionTree{
-    width: 95%;
-    height: 80vh;
-    background-image: url("https://polosaomateus.com.br/wp-content/uploads/2020/04/nutricao-clinica.png");
-    background-repeat: no-repeat;
-    margin-bottom: 100px;
-    border-radius: 10px;
+  & .Agendamento {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 100px;
+    margin-top: -1px;
+    background-image: linear-gradient(to left, var(--color03), var(--color04));
 
-        & div:nth-child(1){
-            width: 40%;
-           
+    & img{
+        width: 350px;
+    }
 
-            & h1{
-                text-transform: uppercase;
-                color: var(--color03);
-            }
-
-            & span{
-                color: var(--color03);
-                font-size: 18px;
-                
-            }
+    & div{
+        width: 50%;
+        border: none;
+        
+        & h1{
+            text-transform: uppercase;
+            text-align: left!important;
+            color: var(--color01);
         }
 
-
-        & div:nth-child(2){
-            width: 40%;
-
-            & button{
-                text-transform: uppercase;
-                padding: 20px;
-                border-radius: 10px;
-                font-weight: bolder;
-            }
+        & p{
+            color: var(--color01);
+            text-align: justify;
+            font-weight: bold;
         }
+
+        & button{
+            padding: 20px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: solid 1px var(--color03);
+        }
+
+        & button:hover{
+            transform: scale(1.1);
+            transition: 0.8s;
+        }
+    }
+  }
 }
+
 
 
 
@@ -349,24 +328,32 @@ html, body, ul, li, a{
         }
     }
 
-    .SactionOne{
-        height: 800px;
+    .SectionOne{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
         
-        & img{
-            height: 400px;
+        
+
+        & div{
+            margin-top: 20px;
             width: 90%;
-            top: 450px;
-            left: 20px;
+            
+
+            & div:nth-child(1){
+                text-align: center;
+            }
+
+            & p{
+                width: 100%;
+                text-align: center;
+            }
         }
 
-        & .ContainerAbaut{
-            max-width: 100%;
-            position: absolute;
-            top: -50px;
-            margin-right: 0;
-            padding: 20px;
-            text-align: center;
-        }
+
+
 
     }
 
@@ -376,15 +363,25 @@ html, body, ul, li, a{
         z-index: 1;
     }
 
+    
+    h3{
+        margin-top: 50px!important;
+        font-size: 21px!important;
+        max-width: 90%;
+    }
+
     .SectionTwo{
-        height: 1200px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 50px;
 
         & h3{
             margin-bottom: 30px;
             font-size: 18px;
         }
         & div{
-           width: 90%;
+           width: 100%;
+           padding: 10px;
         }
 
         & img{
@@ -394,7 +391,7 @@ html, body, ul, li, a{
 
         
         & h4{
-            font-size: 20px;
+            font-size: 15px;
         }
 
         & p{
@@ -420,22 +417,37 @@ html, body, ul, li, a{
 
     .SactionTree{
 
-        & div:nth-child(1){
-            width: 90%;
 
-            & h1{
-                font-size: 25px;
+        & .Agendamento{
+            text-align: center;
+
+
+            & img{
+                width: 300px!important;
             }
 
-            & span{
-                font-size: 15px;
+            & div{
+                width: 80%;
+ 
+                & h1{
+                    text-align: center!important;
+                    font-size: 21px;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                }
 
+                & p{
+                    text-align: center;
+                }
+
+                & button{
+                    padding: 10px!important;
+                    font-size: 15px;
+                    margin-bottom: 30px;
+                }
             }
         }
 
-        & div:nth-child(2){
-            width: 100%;
-        }
     }
 }
 

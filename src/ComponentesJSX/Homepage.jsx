@@ -4,7 +4,8 @@ import imgHeader01 from "../Assets/1.png";
 import imgHeader02 from "../Assets/2.png";
 import imgHeader03 from "../Assets/3.png";
 import MaternoIcon from '../Assets/MaternoIcon.svg'
-import imgAbaut from "../Assets/PersonalAbaut.png"
+import Animete from "../Assets/Animete.png"
+import Agendamento from "../Assets/Agendamento.png"
 import { useNavigate } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { HiMenuAlt1 } from "react-icons/hi";
@@ -129,55 +130,27 @@ function Homepage() {
                 </div>
             </header>
 
-            {/* Section one */}
-            <section className={Styles.SactionOne}>
 
-                    
-                <img src={imgAbaut} alt="Abaut"/>
-                    
+            <section className={Styles.SectionOne}>
+                    <img src={Animete} alt="Iracema" />
 
-                <div className={Styles.ContainerAbaut}>
-                    <h1>Iracema Rocha</h1>
-                    <span>Nutricionista</span>
+                    <div>
+                        <div>
+                            <h1>Iracema Rocha</h1>
+                            <span>Nutricionista - CRN: 48156 </span>
+                        </div>
 
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, omnis? 
-                        Praesentium eveniet eius at enim fugiat ut labore blanditiis ratione. 
-                        Nisi quod cum aliquid, odio debitis pariatur fugiat doloribus eligendi.
+                        <p>
 
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, omnis? 
-                        Praesentium eveniet eius at enim fugiat ut labore blanditiis ratione. 
-                        Nisi quod cum aliquid, odio debitis pariatur fugiat doloribus eligendi.
+                           Iracema Rocha é nutricionista formada pela Universidade Federal de Alagoas (UFAL), 
+                           com experiência em nutrição clínica e educação nutricional. Com foco no bem-estar de seus pacientes,
+                           ela utiliza abordagens personalizadas e práticas baseadas em evidências científicas
+                           para promover uma alimentação equilibrada e saudável.
 
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, omnis? 
-                        Praesentium eveniet eius at enim fugiat ut labore blanditiis ratione. 
-                        Nisi quod cum aliquid, odio debitis pariatur fugiat doloribus eligendi.
+                        </p>
+                    </div>
 
-                    </p>
-                </div>
             </section>
-
-             {/* SVG one */}
-            <svg
-
-                className={Styles.SvgWave}
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1440 320"
-                style={{ width: "100%", height: "auto" }}
-                
-            >
-
-                <defs>
-                    <linearGradient id="gradient" x1="100%" y1="0%" x2="0" y2="0%">
-                        <stop offset="100%" stopColor="#ffffff" />
-                    </linearGradient>
-                </defs>
-
-                <path
-                    fill="url(#gradient)"
-                    d="M0,128L60,149.3C120,171,240,213,360,208C480,203,600,149,720,133.3C840,117,960,139,1080,154.7C1200,171,1320,181,1380,186.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-                />
-            </svg>      
 
             {/* Modal */}
             {specialization.map((iteem) =>{
@@ -192,8 +165,8 @@ function Homepage() {
 
 
             {/* Section Two */}
+            <h3>Especializações Nutricionais</h3>
             <section className={Styles.SectionTwo}>
-                <h3>Conheça um pouco mais sobre as especializações nutricionais</h3>
                 {specialization.map((item)=>{
                     return(
                         <div key={item.id} onClick={() => setModalOpen(item.id)}>
@@ -208,19 +181,28 @@ function Homepage() {
             </section>
 
 
-            {/* SectionTree */}
-                <div className={Styles.Space}></div>
-                <section className={Styles.SactionTree}> 
-                    <div>
-                        <h1>Agende a sua consulta</h1>
-                        <span>Sua saúde merece prioridade: agende agora sua consulta nutricional e comece a transformar sua alimentação com orientação profissional e acolhimento individualizado!</span>
-                    </div>
-                    
-                    <div>
-                        <button>Aendar a sua Consulta</button>
-                    </div>
 
-                </section>
+
+
+            {/* SectionTree */}
+               
+            <section className={Styles.SactionTree}> 
+ 
+                <div  className={Styles.Agendamento}>
+                    <img src={Agendamento} alt="Agendamento-Iracema" />
+
+                        <div>
+                            <h1>Faça seu agendamento</h1>
+                            <p>
+                                Sua saúde começa com pequenas escolhas — e a mais importante delas é buscar orientação!
+                                Se você quer emagrecer com saúde, ganhar mais energia no dia a dia, melhorar sua digestão ou simplesmente entender melhor o que seu corpo precisa, a nutrição personalizada pode transformar sua vida.
+                                Agende sua consulta e descubra como uma alimentação equilibrada pode fazer a diferença no seu bem-estar físico e emocional.
+                            </p>
+                            <button>Agendar Consulta</button>
+                        </div>
+                </div>
+
+            </section>
 
         </div>
     );
