@@ -35,7 +35,7 @@ function Homepage() {
         {
             id: 2,
             icon: MaternoIcon,
-            Name: "Materno Infantil",
+            Name: "Saúde da Mulher",
             DescriptionOne: "Descrição de Texte",
             DescriptionTwo: "Descrição de Texte",
             background: "orange",
@@ -44,7 +44,7 @@ function Homepage() {
                 {
             id: 3,
             icon: MaternoIcon,
-            Name: "Materno Infantil",
+            Name: "Oncologia",
             DescriptionOne: "Descrição de Texte",
             DescriptionTwo: "Descrição de Texte",
             background: "green",
@@ -53,7 +53,7 @@ function Homepage() {
         {
             id: 4,
             icon: MaternoIcon,
-            Name: "Materno Infantil",
+            Name: "Nutrição Cliníca",
             DescriptionOne: "Descrição de Texte",
             DescriptionTwo: "Descrição de Texte",
             background: "gray",
